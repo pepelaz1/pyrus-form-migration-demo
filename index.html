@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormShift — демонстрация миграции форм Pyrus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="#top"><span class="brand-icon">↗</span> FormShift</a><span class="top-tag">ДЕМО · ЛОКАЛЬНЫЕ ДАННЫЕ</span></header>
+    <main id="top">
+      <section class="hero">
+        <div><p class="eyebrow">МАССОВОЕ ОБНОВЛЕНИЕ ФОРМ</p><h1>Проверьте изменения<br><em>до записи в Pyrus.</em></h1><p class="lead">Перенос значений из старых полей в новые, проверка данных и план обновления задач. Прототип работает с тестовым JSON и ничего не отправляет в Pyrus.</p><div class="hero-actions"><button id="load-demo" class="primary">Загрузить пример <span>↗</span></button><label class="upload">Загрузить свой JSON <input id="file-input" type="file" accept=".json,application/json"></label></div></div>
+        <div class="hero-graphic" aria-hidden="true"><div class="diagram-title">ПЛАН МИГРАЦИИ</div><div class="diagram-row"><span>Старые поля</span><b>01 — 03</b></div><div class="diagram-line"><i></i></div><div class="diagram-row"><span>Проверка</span><b>✓ / !</b></div><div class="diagram-line"><i></i></div><div class="diagram-row"><span>Новые поля</span><b>11 — 13</b></div></div>
+      </section>
+      <section class="workspace">
+        <div class="section-heading"><div><p class="eyebrow">РАБОЧАЯ ОБЛАСТЬ</p><h2>Просмотр миграции</h2></div><span id="file-name" class="source-name">Пример не загружен</span></div>
+        <div class="stat-grid"><div class="stat"><span>Записей</span><strong id="total">—</strong></div><div class="stat"><span>Готовы к переносу</span><strong id="ready">—</strong></div><div class="stat"><span>Требуют исправления</span><strong id="errors">—</strong></div><div class="stat"><span>Без изменений</span><strong id="unchanged">—</strong></div></div>
+        <div class="two-col"><section class="card"><div class="card-head"><span class="step">01</span><div><h3>Сопоставление полей</h3><p>Какие значения попадут в новые поля</p></div></div><div id="mapping" class="mapping"><p class="empty">Загрузите пример, чтобы увидеть сопоставление.</p></div></section><section class="card"><div class="card-head"><span class="step">02</span><div><h3>Правила проверки</h3><p>Ошибочные записи исключаются из плана</p></div></div><div class="rules"><div><span class="rule-icon">✓</span> Обязательные значения заполнены</div><div><span class="rule-icon">@</span> Адрес почты имеет корректный формат</div><div><span class="rule-icon">#</span> Сумма больше нуля</div><div><span class="rule-icon">≠</span> Уже совпадающие значения пропускаются</div></div></section></div>
+        <section class="card results"><div class="results-head"><div><div class="card-head"><span class="step">03</span><div><h3>Предварительный результат</h3><p>Каждую запись можно проверить перед экспортом</p></div></div></div><button id="download" class="secondary" disabled>Скачать план JSON ↓</button></div><div class="table-wrap"><table><thead><tr><th>ID задачи</th><th>Статус</th><th>Новые значения</th><th>Примечание</th></tr></thead><tbody id="rows"><tr><td colspan="4" class="empty">Загрузите пример, чтобы увидеть результат.</td></tr></tbody></table></div></section>
+      </section>
+      <footer>FormShift · независимый демонстрационный прототип · данные остаются в браузере</footer>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

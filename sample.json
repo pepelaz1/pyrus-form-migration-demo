@@ -1,0 +1,15 @@
+{
+  "form_id": 1423,
+  "mapping": [
+    { "from": 1, "to": 11, "label": "Клиент", "required": true },
+    { "from": 2, "to": 12, "label": "Эл. почта", "required": true, "type": "email" },
+    { "from": 3, "to": 13, "label": "Сумма, ₽", "required": true, "type": "positive_number" }
+  ],
+  "tasks": [
+    { "id": 1001, "fields": [{ "id": 1, "value": "Альфа" }, { "id": 2, "value": "hello@alfa.ru" }, { "id": 3, "value": "15 500" }] },
+    { "id": 1002, "fields": [{ "id": 1, "value": "Бета" }, { "id": 2, "value": "wrong-address" }, { "id": 3, "value": "8200" }] },
+    { "id": 1003, "fields": [{ "id": 1, "value": "Гамма" }, { "id": 2, "value": "info@gamma.ru" }, { "id": 3, "value": "0" }] },
+    { "id": 1004, "fields": [{ "id": 1, "value": "Дельта" }, { "id": 2, "value": "mail@delta.ru" }, { "id": 3, "value": "3200" }, { "id": 13, "value": "3200" }] },
+    { "id": 1005, "fields": [{ "id": 1, "value": "" }, { "id": 2, "value": "contact@example.ru" }, { "id": 3, "value": "5400" }] }
+  ]
+}
